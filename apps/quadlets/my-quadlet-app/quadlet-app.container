@@ -1,0 +1,13 @@
+[Unit]
+Description=Sleep Container
+After=network.target
+
+[Container]
+Label=app=quadlet-app
+ContainerName=sleep-container
+Image=alpine:latest
+Command=sleep 3600
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
